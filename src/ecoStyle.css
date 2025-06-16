@@ -1,0 +1,15 @@
+#ecoLogo {
+    float:right;
+}
+h1 {
+    color: green;
+    white-space: nowrap;
+}
+.nav-link
+{
+    color:green;
+}
+.nav-link.active
+{
+    text-decoration: underline;
+}
