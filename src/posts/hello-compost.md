@@ -26,7 +26,7 @@ https://vanilla-compost.netlify.app/
  ## The components  
  ***
  #### Vanilla HTML & CSS
- Static content should ultimately be static. HTML is simple enough. While CSS can get complex, the default version of this project only contains 15 lines of custom CSS.
+ Static content should be static. HTML is simple enough. While CSS can get complex, the default version of this project only contains 15 lines of custom CSS.
 
  #### [Marked](https://github.com/markedjs/marked) for parsing Markdown
 If HTML is too thick for you, then maybe markdown is more your speed. It was created in 2004 to make formatting text easier than vanilla HTML & CSS, and has since become an established standard for readme files (like the one you're reading), static site generators, and other documentation platforms.
