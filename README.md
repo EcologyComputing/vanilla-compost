@@ -22,7 +22,7 @@ https://vanilla-compost.netlify.app/
  A mixture or compound.
  
  ## Motivation
- After running most of my personal websites on a VPS for over a decade, I decided it was time to migrate them to a more modern platform. Unfortunately, the options available on the market all felt bloated and over-engineered while somehow still lacking the user experience I was hoping for, so I started designing an alternative from [first principles](https://en.wikipedia.org/wiki/First_principle). Vanilla compost sprouted from this exercise in design.
+ After running most of my personal websites on a VPS for over a decade, I decided it was time to migrate them to a more modern platform. Unfortunately, the options available on the market all felt bloated and over-engineered while somehow still lacking the user experience I was hoping for, so I started designing an alternative from [first principles](https://en.wikipedia.org/wiki/First_principle), like [this](https://justfuckingusehtml.com/). Vanilla compost sprouted from this exercise in design.
  
  ## The components  
  ***
