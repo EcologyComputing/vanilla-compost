@@ -1,248 +1,43 @@
----
-- __[pica](https://nodeca.github.io/pica/demo/)__ - high quality and fast image
-  resize in browser.
-- __[babelfish](https://github.com/nodeca/babelfish/)__ - developer friendly
-  i18n with plurals support and easy syntax.
+A simple static blog template based on [markdown](https://www.markdownguide.org/getting-started/).  
+[BS](https://en.wikipedia.org/wiki/Bullshit_(disambiguation)) not included 🐄💩
 
-You will like those projects!
-
----
-
-# h1 Heading 
-## h2 Heading
-### h3 Heading
-#### h4 Heading
-##### h5 Heading
-###### h6 Heading
-
-
-## Horizontal Rules
-
-___
-
----
-
+### Live Demo
+https://vanilla-compost.netlify.app/
+### Quickstart
+1. Clone [this repo](https://github.com/EcologyComputing/vanilla-compost) locally.
+2. Run it locally in an [nginx](https://nginx.org/) container (this line works on windows 11)  :  
+``docker run -d --rm -p 8080:80 -v "$(pwd)/src:/usr/share/nginx/html" nginx:stable-alpine3.21``   
+3. View the default template at http://localhost:8080/  
+4. Update for your content accordingly.
+5. Add the project to you're own separate github repo.
+6. Host it for free on [Netlify](https://docs.netlify.com/welcome/add-new-project/#import-from-an-existing-repository).
+7. Add posts & updates via pull requests to your github repo.
+## Definitions
 ***
-
-
-## Typographic replacements
-
-Enable typographer option to see result.
-
-(c) (C) (r) (R) (tm) (TM) (p) (P) +-
-
-test.. test... test..... test?..... test!....
-
-!!!!!! ???? ,,  -- ---
-
-"Smartypants, double quotes" and 'single quotes'
-
-
-## Emphasis
-
-**This is bold text**
-
-__This is bold text__
-
-*This is italic text*
-
-_This is italic text_
-
-~~Strikethrough~~
-
-
-## Blockquotes
-
-
-> Blockquotes can also be nested...
->> ...by using additional greater-than signs right next to each other...
-> > > ...or with spaces between arrows.
-
-
-## Lists
-
-Unordered
-
-+ Create a list by starting a line with `+`, `-`, or `*`
-+ Sub-lists are made by indenting 2 spaces:
-  - Marker character change forces new list start:
-    * Ac tristique libero volutpat at
-    + Facilisis in pretium nisl aliquet
-    - Nulla volutpat aliquam velit
-+ Very easy!
-
-Ordered
-
-1. Lorem ipsum dolor sit amet
-2. Consectetur adipiscing elit
-3. Integer molestie lorem at massa
-
-
-1. You can use sequential numbers...
-1. ...or keep all the numbers as `1.`
-
-Start numbering with offset:
-
-57. foo
-1. bar
-
-
-## Code
-
-Inline `code`
-
-Indented code
-
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
-
-
-Block code "fences"
-
-```
-Sample text here...
-```
-
-Syntax highlighting
-
-``` js
-var foo = function (bar) {
-  return bar++;
-};
-
-console.log(foo(5));
-```
-
-## Tables
-
-| Option | Description |
-| ------ | ----------- |
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
-
-Right aligned columns
-
-| Option | Description |
-| ------:| -----------:|
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
-
-
-## Links
-
-[link text](http://dev.nodeca.com)
-
-[link with title](http://nodeca.github.io/pica/demo/ "title text!")
-
-Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
-
-
-## Images
-
-![Minion](https://octodex.github.com/images/minion.png)
-![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
-
-Like links, Images also have a footnote style syntax
-
-![Alt text][id]
-
-With a reference later in the document defining the URL location:
-
-[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
-
-
-## Plugins
-
-The killer feature of `markdown-it` is very effective support of
-[syntax plugins](https://www.npmjs.org/browse/keyword/markdown-it-plugin).
-
-
-### [Emojies](https://github.com/markdown-it/markdown-it-emoji)
-
-> Classic markup: :wink: :cry: :laughing: :yum:
->
-> Shortcuts (emoticons): :-) :-( 8-) ;)
-
-see [how to change output](https://github.com/markdown-it/markdown-it-emoji#change-output) with twemoji.
-
-
-### [Subscript](https://github.com/markdown-it/markdown-it-sub) / [Superscript](https://github.com/markdown-it/markdown-it-sup)
-
-- 19^th^
-- H~2~O
-
-
-### [\<ins>](https://github.com/markdown-it/markdown-it-ins)
-
-++Inserted text++
-
-
-### [\<mark>](https://github.com/markdown-it/markdown-it-mark)
-
-==Marked text==
-
-
-### [Footnotes](https://github.com/markdown-it/markdown-it-footnote)
-
-Footnote 1 link[^first].
-
-Footnote 2 link[^second].
-
-Inline footnote^[Text of inline footnote] definition.
-
-Duplicated footnote reference[^second].
-
-[^first]: Footnote **can have markup**
-
-    and multiple paragraphs.
-
-[^second]: Footnote text.
-
-
-### [Definition lists](https://github.com/markdown-it/markdown-it-deflist)
-
-Term 1
-
-:   Definition 1
-with lazy continuation.
-
-Term 2 with *inline markup*
-
-:   Definition 2
-
-        { some code, part of Definition 2 }
-
-    Third paragraph of definition 2.
-
-_Compact style:_
-
-Term 1
-  ~ Definition 1
-
-Term 2
-  ~ Definition 2a
-  ~ Definition 2b
-
-
-### [Abbreviations](https://github.com/markdown-it/markdown-it-abbr)
-
-This is HTML abbreviation example.
-
-It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
-
-*[HTML]: Hyper Text Markup Language
-
-### [Custom containers](https://github.com/markdown-it/markdown-it-container)
-
-::: warning
-*here be dragons*
-:::
-
-
-
-
-
+### [vanilla](https://www.merriam-webster.com/dictionary/vanilla) (adjective)
+ lacking distinction : plain, ordinary, conventional.
+
+### [compost](https://www.merriam-webster.com/dictionary/compost) (noun)
+ A mixture or compound.
+ 
+ ## Motivation
+ After running most of my personal websites on a VPS for over a decade, I decided it was time to migrate them to a more modern platform. Unfortunately, the options available on the market all felt bloated and over-engineered while somehow still lacking the user experience I was hoping for, so I started designing an alternative from [first principles](https://en.wikipedia.org/wiki/First_principle). Vanilla compost sprouted from this exercise in design.
+ 
+ ## The components  
+ ***
+ #### Vanilla HTML & CSS
+ Static content should ultimately be static. HTML is simple enough. While CSS can get complex, the default version of this project only contains 15 lines of custom CSS.
+
+ #### [Marked](https://github.com/markedjs/marked) for parsing Markdown
+If HTML is too thick for you, then maybe markdown is more your speed. It was created in 2004 to make formatting text easier than vanilla HTML & CSS, and has since become an established standard for readme files (like the one you're reading), static site generators, and other documentation platforms.
+
+Marked parses markdown to HTML and can be included in an HTML page with a single line of code. 
+
+#### [Bootstrap](https://getbootstrap.com/) for UI
+Bootstrap is a frontend toolkit that provides a lot of UI examples that only need 2 lines added to an HTML file to work. The Navigation for the default vanilla compost template (and all of my personal sites) is slimmed down version of [this navbar](https://getbootstrap.com/docs/5.3/components/navbar/).
+
+#### [JQuery](https://jquery.com/) for browser glue
+Jquery is a JS library that's fast, small, and feature rich. Vanilla compost uses jquery to parse the name and content of the mardown file for a post and hand it to Marked to display in the browser. A lot of static site generators do this in either a build step or on the backend, which starts to take forever as a site grows larger. Pushing this compute step to the end user's browser just in time for them to view the post their looking for saves a lot of time and energy.
+
+#### [Dominate](https://github.com/Knio/dominate) & python for pipelines
+Parsing and generating the full list of available posts would eventually be more than Jquery could handle in the browser. Instead, I shifted this compute step left on our value stream towards the build step. generate_posts.py uses Dominate to parse the available mardown files for each post then generates the posts.html page based off a template file. This can be executed locally while testing or run as part of a pipeline during your deployment process.
