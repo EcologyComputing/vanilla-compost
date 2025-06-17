@@ -1,3 +1,4 @@
+# Vanilla Compost
 A simple static blog template based on [markdown](https://www.markdownguide.org/getting-started/).  
 [BS](https://en.wikipedia.org/wiki/Bullshit_(disambiguation)) not included 🐄💩
 
