@@ -13,3 +13,6 @@ h1 {
 {
     text-decoration: underline;
 }
+ol, ul, p {
+    display: inline-block;
+}
