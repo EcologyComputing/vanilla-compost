@@ -50,11 +50,23 @@ function extractDateFromMarkdown(filepath) {
 }
 
 function dateSortKey(dateStr) {
-    const d = Date.parse(dateStr);
-    if (!isNaN(d)) {
-        return d;
+    // Parse against the two specific formats this file actually writes/reads,
+    // rather than the more permissive Date.parse - which would also "succeed"
+    // on date-like strings that aren't really one of these two formats.
+    const monthMatch = dateStr.match(/^([A-Za-z]+) (\d{1,2}), (\d{4})$/);
+    if (monthMatch) {
+        const monthIndex = MONTHS.indexOf(monthMatch[1]);
+        if (monthIndex !== -1) {
+            return new Date(Number(monthMatch[3]), monthIndex, Number(monthMatch[2])).getTime();
+        }
     }
-    return 0;
+
+    const isoMatch = dateStr.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if (isoMatch) {
+        return new Date(Number(isoMatch[1]), Number(isoMatch[2]) - 1, Number(isoMatch[3])).getTime();
+    }
+
+    return 0; // unparseable - treat as oldest, matching the Python version's datetime.min fallback
 }
 
 function generatePostsHtml() {
