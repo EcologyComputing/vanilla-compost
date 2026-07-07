@@ -6,9 +6,7 @@ A simple static blog template based on [markdown](https://www.markdownguide.org/
 [vanilla-compost.netlify.app](https://vanilla-compost.netlify.app/)
 ### Quickstart
 1. Clone [this repo](https://github.com/EcologyComputing/vanilla-compost) locally.
-2. Run it locally from /src with either:
-    - With python: `python -m http.server 8080`
-    - or in an [nginx](https://nginx.org/) container (this line works on windows 11)  :  `docker run -d --rm -p 8080:80 -v "$(pwd):/usr/share/nginx/html" nginx:stable-alpine3.21`  
+2. Run it locally from /src With python: `python -m http.server 8080`
 3. View the default template at [localhost:8080](http://localhost:8080/)
 4. Update for your content accordingly.
 5. Add the project to your own separate github repo.
